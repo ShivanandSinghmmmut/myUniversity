@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>university website</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+
+  <body>
+    <section class="header">
+      <nav>
+        <a href="index.html"><img src="img/logo3.png" alt="" /></a>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()"></i>
+          <ul>
+            <li><a href="">HOME</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">COURSE</a></li>
+            <li><a href="">BLOG</a></li>
+            <li><a href="">CONTACT-US</a></li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </nav>
+
+      <div class="text-box">
+        <h1>our university</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
+          incidunt mollitia culpav <br />
+          oluptatum, aspernatur quam amet id.
+        </p>
+        <a href="" class="visit-btn">visit us to know more</a>
+      </div>
+    </section>
+    <!---------------course-------------->
+
+    <section class="course">
+      <h1>Courses We Offer</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="course-col">
+          <h3>Intermediate</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum
+            quis itaque dolorem ducimus beatae nihil, veniam sint natus est
+            perferendis blanditiis suscipit! Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Lorem, ipsum dolor. Lorem, ipsum
+            dolor.
+          </p>
+        </div>
+
+        <div class="course-col">
+          <h3>Degree</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum
+            quis itaque dolorem ducimus beatae nihil, veniam sint natus est
+            perferendis blanditiis suscipit! Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Lorem, ipsum dolor. Lorem, ipsum
+            dolor.
+          </p>
+        </div>
+
+        <div class="course-col">
+          <h3>Post Graduation</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi ipsum
+            quis itaque dolorem ducimus beatae nihil, veniam sint natus est
+            perferendis blanditiis suscipit! Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Lorem, ipsum dolor. Lorem, ipsum
+            dolor.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- --------campus--------- -->
+    <section class="campus">
+      <h1>Our Global Campus</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="campus-col">
+          <img src="img/campusimg1.jpg" />
+          <div class="layer">
+            <h3>LONDON</h3>
+          </div>
+        </div>
+        <div class="campus-col">
+          <img src="img/campusimg1.jpg" />
+          <div class="layer">
+            <h3>NEW YORK</h3>
+          </div>
+        </div>
+
+        <div class="campus-col">
+          <img src="img/campusimg1.jpg" />
+          <div class="layer">
+            <h3>WASHINGOTON</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------Facilities------------- -->
+    <section class="facilities">
+      <h1>Our Facilities</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+
+      <div class="row">
+        <div class="facilities-col">
+          <img src="img/library.jpg" />
+          <h3>World Class Library</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur voluptatem itaque quo neque impedit suscipit eveniet.
+            Sed consequatur ipsam perspiciatis.
+          </p>
+        </div>
+        <div class="facilities-col">
+          <img src="img/library.jpg" />
+          <h3>World Class Library</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur voluptatem itaque quo neque impedit suscipit eveniet.
+            Sed consequatur ipsam perspiciatis.
+          </p>
+        </div>
+        <div class="facilities-col">
+          <img src="img/library.jpg" />
+          <h3>World Class Library</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Consequuntur voluptatem itaque quo neque impedit suscipit eveniet.
+            Sed consequatur ipsam perspiciatis.
+          </p>
+        </div>
+      </div>
+    </section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"
+      integrity="sha512-CEiA+78TpP9KAIPzqBvxUv8hy41jyI3f2uHi7DGp/Y/Ka973qgSdybNegWFciqh6GrN2UePx2KkflnQUbUhNIA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <!--------javaScript for toggle menu-------->
+    <script>
+      var navLinks = document.getElementById("navLinks");
+
+      function showMenu() {
+        navLinks.style.opacity = "1";
+      }
+
+      function hideMenu() {
+        navLinks.style.opacity = "0";
+      }
+    </script>
+    <script>
+      var waypoint = new Waypoint({
+        element: document.getElementsByClassName("course"),
+        handler: function (direction) {
+            $(".course").addClass("animate__animated animate__backInLeft");
+            // $(".course").toggle(".animate_animated")
+        },
+        offset:'25%'
+      });
+    </script>
+  </body>
+</html>
